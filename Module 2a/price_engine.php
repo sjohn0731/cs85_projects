@@ -68,14 +68,24 @@
              //Long Name Discount
             if ($customerFirstName > 6) {
                 $finalPrice = $finalPrice - 1.00;
-                $details .= "<li>:Long Name Discount: <span>-$1.00</span></li>";
+                $details .= "<li>Long Name Discount: <span>-$1.00</span></li>";
              }
 
 
             // --- DO NOT EDIT BELOW THIS LINE ---
             echo "<ul>" . $details . "</ul>";
             echo "<ul><li><span class='total'>Final Price:</span> <span class='total'>$" . number_format($finalPrice, 2) . "</span></li></ul>";
-
+/* 
+            MY DEBUGGING LOG:
+            -I realized I was going to have an issue with the shiirt size and long name discount, 
+            so I nested an if statemnt (name discount) into the main staement
+            causing the issue (shirt size), making the discount only come up if the shirt was an XL.
+            -I also realized I need to start entering logic bit by bit and test as I go; I entered all of the logic at the beginning and tested everything at the end.
+            That might be feasible for a relatively small project like this; not so much for larger sites with potentially thousands of lines of code.
+            *Sidenote*
+            Apologies for this late assignment; Herd stopped working for me and I spent this weekend trying to figure out the issue. Unfortunately, I was not able to.
+            But I was able to get back on track once I switched to the Xampp framework.
+            */
         ?>
     </div>
 </body>
