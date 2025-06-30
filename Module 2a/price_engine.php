@@ -20,7 +20,7 @@
             $size = ['S', 'M', 'L', 'XL',];
             $color = ['Sunset Orange', 'Ocean Blue', 'Computer Blue', 'Alpine White',]; // Any string, but test with 'Sunset Orange' or 'Ocean Blue'
             $isCustomized = [true, false];
-            $customerFirstName = 'Shakir'; // <-- IMPORTANT: REPLACE WITH YOUR ACTUAL FIRST NAME
+            $customerFirstName = 'Shakir';
 
             // --- Part A: Implement the logic below using ONLY simple, nested if-statements ---
             $finalPrice = 22.50;
@@ -28,10 +28,16 @@
 
             // Your nested if-statement logic goes here...
             // Example of a rule:
-            // if ($size == 'L') {
-            //     $finalPrice = $finalPrice + 1.75;
-            //     $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
-            // }
+            if ($size == 'L') {
+                 $finalPrice = $finalPrice + 1.75;
+                 $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
+             }
+             if ($size == "XL") {
+                $finalPrice = $finalPrice + 2.50;
+                $details .= "<li>Size (XL) Upcharge: <span>+$2.50</span></li>";
+             }
+
+             
 
 
             // --- DO NOT EDIT BELOW THIS LINE ---
