@@ -18,7 +18,7 @@
         <?php
             // --- Configuration: Change these values to test all business rules! ---
             $size = ['S', 'M', 'L', 'XL',];
-            $color = ['Sunset Orange', 'Ocean Blue', 'Computer Blue', 'Alpine White',]; // Any string, but test with 'Sunset Orange' or 'Ocean Blue'
+            $color = ['Sunset Orange', 'Ocean Blue', 'Computer Blue', 'Alpine White', "Black Chrome"]; // Any string, but test with 'Sunset Orange' or 'Ocean Blue'
             $isCustomized = [true, false];
             $customerFirstName = 'Shakir';
 
@@ -27,7 +27,7 @@
             $details = "<li>Base Price: <span>$" . number_format($finalPrice, 2) . "</span></li>";
 
             // Your nested if-statement logic goes here...
-            // Example of a rule:
+            // Sizing 
             if ($size == 'L') {
                  $finalPrice = $finalPrice + 1.75;
                  $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
@@ -36,8 +36,40 @@
                 $finalPrice = $finalPrice + 2.50;
                 $details .= "<li>Size (XL) Upcharge: <span>+$2.50</span></li>";
              }
-
-             
+             //Colors
+             if ($color == "Computer Blue") {
+                $details .= "<li>Color (Computer Blue)</li>";
+             }             
+             if ($color == "Alpine White") {
+                $details .= "<li>Color (Alpine White)</li>";
+             }             
+             if ($color == "Black Chrome") {
+                $details .= "<li>Color (Black Chrome)</li>";
+             }             
+             if ($color == "Sunset Orange") {
+                $finalPrice = $finalPrice + 2.50;
+                $details .= "<li>Color (Sunset Orange) Premium Color: <span>+$2.50</span></li>";
+             }
+             if ($color == "Ocean Blue") {
+                $details .= "<li>Color (Black Chrome)</li>";
+                            $finalPrice = $finalPrice + 2.50;
+                $details .= "<li>Color (Ocean Blue) Premium Color: <span>+$2.50</span></li>";
+             }
+             //Custom Print
+             if ($isCustomized == true) {
+                $finalPrice = $finalPrice + 5.00;
+                $details .= "<li>Custom Text Fee: <span>+$5.00</span></li>";
+                if ($size == 'XL') {
+                    $finalPrice = $finalPrice + 3.00;
+                    $details .= "<li>XL Shipping Fee (larger printing stenicil): <span>+$3.00</span></li>";
+                }
+            
+             }
+             //Long Name Discount
+            if ($customerFirstName > 6) {
+                $finalPrice = $finalPrice - 1.00;
+                $details .= "<li>:Long Name Discount: <span>-$1.00</span></li>";
+             }
 
 
             // --- DO NOT EDIT BELOW THIS LINE ---
