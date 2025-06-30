@@ -17,10 +17,10 @@
         <h1>Order Summary</h1>
         <?php
             // --- Configuration: Change these values to test all business rules! ---
-            $size = 'XL'; // Options: 'S', 'M', 'L', 'XL'
-            $color = 'Sunset Orange'; // Any string, but test with 'Sunset Orange' or 'Ocean Blue'
-            $isCustomized = true; // Options: true, false
-            $customerFirstName = 'YourFirstName'; // <-- IMPORTANT: REPLACE WITH YOUR ACTUAL FIRST NAME
+            $size = ['S', 'M', 'L', 'XL',];
+            $color = ['Sunset Orange', 'Ocean Blue', 'Computer Blue', 'Alpine White',]; // Any string, but test with 'Sunset Orange' or 'Ocean Blue'
+            $isCustomized = [true, false];
+            $customerFirstName = 'Shakir'; // <-- IMPORTANT: REPLACE WITH YOUR ACTUAL FIRST NAME
 
             // --- Part A: Implement the logic below using ONLY simple, nested if-statements ---
             $finalPrice = 22.50;
