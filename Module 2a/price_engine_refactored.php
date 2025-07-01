@@ -37,23 +37,12 @@
                 $details .= "<li>Size (XL) Upcharge: <span>+$2.50</span></li>";
              }
              //Colors
-             if ($color == "Computer Blue") {
-                $details .= "<li>Color (Computer Blue)</li>";
-             }             
-             if ($color == "Alpine White") {
-                $details .= "<li>Color (Alpine White)</li>";
-             }             
-             if ($color == "Black Chrome") {
-                $details .= "<li>Color (Black Chrome)</li>";
-             }             
-             if ($color == "Sunset Orange") {
+             if ($color == "Sunset Orange" || "Ocean Blue") {
                 $finalPrice = $finalPrice + 2.50;
-                $details .= "<li>Color (Sunset Orange) Premium Color: <span>+$2.50</span></li>";
+                $details .= "<li>Color (" . $color . ") Premium Color: <span>+$2.50</span></li>";
              }
-             if ($color == "Ocean Blue") {
-                $details .= "<li>Color (Black Chrome)</li>";
-                            $finalPrice = $finalPrice + 2.50;
-                $details .= "<li>Color (Ocean Blue) Premium Color: <span>+$2.50</span></li>";
+             else {
+               
              }
              //Custom Print
              if ($isCustomized == true) {
