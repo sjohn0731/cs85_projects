@@ -32,22 +32,23 @@
                  $finalPrice = $finalPrice + 1.75;
                  $details .= "<li>Size (L) Upcharge: <span>+$1.75</span></li>";
              }
-             if ($size == "XL") {
+            if ($size == "XL") {
                 $finalPrice = $finalPrice + 2.50;
                 $details .= "<li>Size (XL) Upcharge: <span>+$2.50</span></li>";
              }
-             //Colors
-             if ($color == "Sunset Orange" || "Ocean Blue") {
-                $finalPrice = $finalPrice + 2.50;
-                $details .= "<li>Color (" . $color . ") Premium Color: <span>+$2.50</span></li>";
-             }
-             else {
-               
-             }
-             //Custom Print
-             if ($isCustomized == true) {
-                $finalPrice = $finalPrice + 5.00;
-                $details .= "<li>Custom Text Fee: <span>+$5.00</span></li>";
+
+            //Colors
+            if ($color == "Sunset Orange") {
+               $finalPrice = $finalPrice + 2.50;
+               $details .= "<li>Color (" .$color .") <span>+$2.50</span></li>";
+            }
+            else{
+                $details .= "<li>Color (" . $color . ") <span>$0.00</span></li>";   
+            }          
+            //Custom Print
+            if ($isCustomized == true) {
+               $finalPrice = $finalPrice + 5.00;
+               $details .= "<li>Custom Text Fee: <span>+$5.00</span></li>";
              }
                 
             if ($isCustomized == true && $size == 'XL') {
@@ -67,12 +68,14 @@
             echo "<ul><li><span class='total'>Final Price:</span> <span class='total'>$" . number_format($finalPrice, 2) . "</span></li></ul>";
 
             /* 
-            MY DEBUGGING LOG:
+MY DEBUGGING LOG:
             -I realized I was going to have an issue with the shiirt size and long name discount, 
             so I nested an if statemnt (name discount) into the main staement
             causing the issue (shirt size), making the discount only come up if the shirt was an XL.
             -I also realized I need to start entering logic bit by bit and test as I go; I entered all of the logic at the beginning and tested everything at the end.
             That might be feasible for a relatively small project like this; not so much for larger sites with potentially thousands of lines of code.
+            -I also need to read instructions more clearly; I keep trying to just START the assignment instead of slowing down to understand the instructions more clearly.
+            -I spent too much time working on something unnecessary (building an array of variables when 1 would work just fine). 
             *Sidenote*
             Apologies for this late assignment; Herd stopped working for me and I spent this weekend trying to figure out the issue. Unfortunately, I was not able to.
             But I was able to get back on track once I switched to the Xampp framework.

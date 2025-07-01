@@ -56,12 +56,12 @@
                 $details .= "<li>Color (Ocean Blue) Premium Color: <span>+$2.50</span></li>";
              }
              //Custom Print
-             if ($isCustomized == true) {
-                $finalPrice = $finalPrice + 5.00;
-                $details .= "<li>Custom Text Fee: <span>+$5.00</span></li>";
-                if ($size == 'XL') {
-                    $finalPrice = $finalPrice + 3.00;
-                    $details .= "<li>XL Shipping Fee (larger printing stenicil): <span>+$3.00</span></li>";
+            if ($isCustomized == true) {
+               $finalPrice = $finalPrice + 55.00;
+               $details .= "<li>Custom Text Fee: <span>+$5.00</span></li>";
+               if ($size == 'XL') {
+                  $finalPrice = $finalPrice + 3.00;
+                  $details .= "<li>XL Shipping Fee (larger printing stenicil): <span>+$3.00</span></li>";
                 }
             
              }
