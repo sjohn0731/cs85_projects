@@ -17,8 +17,8 @@
         <h1>Order Summary</h1>
         <?php
             // --- Configuration: Change these values to test all business rules! ---
-            $size = ['S', 'M', 'L', 'XL',];
-            $color = ['Sunset Orange', 'Ocean Blue', 'Computer Blue', 'Alpine White', "Black Chrome"]; // Any string, but test with 'Sunset Orange' or 'Ocean Blue'
+            $size = 'XL';
+            $color = 'Sunset Orange'; // Any string, but test with 'Sunset Orange' or 'Ocean Blue'
             $isCustomized = [true, false];
             $customerFirstName = 'Shakir';
 
@@ -59,12 +59,13 @@
              if ($isCustomized == true) {
                 $finalPrice = $finalPrice + 5.00;
                 $details .= "<li>Custom Text Fee: <span>+$5.00</span></li>";
-                if ($size == 'XL') {
-                    $finalPrice = $finalPrice + 3.00;
-                    $details .= "<li>XL Shipping Fee (larger printing stenicil): <span>+$3.00</span></li>";
+             }
+                
+            if ($isCustomized == true && $size == 'XL') {
+                    $finalPrice = $finalPrice + 8.00;
+                    $details .= "<li>XL Shipping Fee (larger printing stenicil): <span>+$8.00</span></li>";
                 }
             
-             }
              //Long Name Discount
             if ($customerFirstName > 6) {
                 $finalPrice = $finalPrice - 1.00;
