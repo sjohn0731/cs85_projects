@@ -28,6 +28,8 @@
             $dayOfYear = $data->dayOfYear;
             $month = $data->month;
 
+            $nameString = strlen($firstName);
+            
 
             ?>
         </div>
