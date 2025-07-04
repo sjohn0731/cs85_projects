@@ -23,11 +23,11 @@
                 // --- YOUR ENTIRE PHP SCRIPT GOES HERE ---
             $firstName = "Shakir";
             $api = "https://timeapi.io/api/time/current/zone?timeZone=America%2FLos_Angeles";
-            $response = file_get_contents($api);
-            $data = json_decode($response);
-            $dayOfYear = $data->dayOfYear;
-            $month = $data->month;
+            $jsonstring = file_get_contents($api);
+            $data = json_decode($jsonstring);
 
+
+            //Loop ranges
             $nameString = strlen($firstName);
             
 
