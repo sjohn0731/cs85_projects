@@ -26,9 +26,12 @@
             $jsonstring = file_get_contents($api);
             $data = json_decode($jsonstring);
 
-
-            //Loop ranges
+            //Loop Ranges
             $nameString = strlen($firstName);
+            $dateTimeString  = $data->dateTime;
+            for ($x = (int)$nameString; $x <= $dateTimeString; $x++){
+
+            };
             
 
             ?>
