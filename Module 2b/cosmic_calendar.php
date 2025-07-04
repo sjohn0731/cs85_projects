@@ -29,7 +29,18 @@
             //Loop Ranges
             $nameString = strlen($firstName);
             $dateTimeString  = $data->dateTime;
+            $month = $data->$month;
+
+
             for ($x = (int)$nameString; $x <= $dateTimeString; $x++){
+                $cssClass = "day-box";
+                if ($cssClass / $namestring && $cssClass / $month) {
+                    echo "<div class='$cosmic-both'>$x</div>";
+                } else if ($cssClass / $namestring) {
+                    echo "<div class='$cosmic-name'>$x</div>";
+                } else if ($cssClass / $month) {
+                    echo "<div class='$cosmic-month'>$x</div>";
+                }
 
             };
             
